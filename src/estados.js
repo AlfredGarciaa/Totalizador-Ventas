@@ -1,5 +1,6 @@
 function estado(nombre) {
     let impuesto;
+    
     if(nombre == "UT")
     {
       impuesto = 6.65;
