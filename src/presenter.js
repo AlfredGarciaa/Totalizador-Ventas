@@ -9,6 +9,10 @@ const precios = document.querySelector("#precio-items");
 const form2 = document.querySelector("#precio-form");
 const div2 = document.querySelector("#precio-div");
 
+const estados = document.querySelector("#estado-items");
+const form3 = document.querySelector("#estado-form");
+const div3 = document.querySelector("#estado-div");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -23,4 +27,12 @@ form2.addEventListener("submit", (event) => {
   const PreciosNumber = Number.parseInt(precios.value);
 
   div2.innerHTML = "<p>" + precio(PreciosNumber) + "</p>";
+});
+
+form3.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const EstadosList = estados.value;
+
+  div3.innerHTML = "<p>" + EstadosList + "</p>";
 });

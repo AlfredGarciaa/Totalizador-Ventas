@@ -4,20 +4,29 @@
     <form id="cantidad-form">
       <label for="cantidad-items">Cantidad de Items:</label>
       <input type="number" id="cantidad-items" />
-      <br>
-        <input type="submit" value="Mostrar" />
-      </br>
+      <input type="submit" value="Mostrar" />
     </form>
     <div id="cantidad-div"></div>
 
     <form id="precio-form">
       <label for="precio-items">Precio de Items:</label>
       <input type="number" id="precio-items" />
-      <br>
-        <input type="submit" value="Mostrar" />
-      </br>
+      <input type="submit" value="Mostrar" />
     </form>
     <div id="precio-div"></div>
+
+    <form id="estado-form">
+      <label>Estado:</label>
+      <select id="estado-items">
+          <option value="UT">UT</option>
+          <option value="NV">NV</option>
+          <option value="TX">TX</option>
+          <option value="AL">AL</option>
+          <option value="CA">CA</option>
+      </select>
+      <input type="submit" value="Seleccionar" />
+    </form>
+    <div id="estado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
