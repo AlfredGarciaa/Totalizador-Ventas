@@ -40,10 +40,12 @@ form3.addEventListener("submit", (event) => {
   const cantidad = Number.parseInt(cantidades.value);
   const estado_1 = 'CA';
   const estado_2 = 'TX';
+  const estado_3 = 'AL';
 
   div3.innerHTML = "<p> Estado: " + EstadosList + 
                    "<p> Impuesto: " + estado(EstadosList) +
                    "<p> Precio Neto: " + neto(precio, cantidad) +
                    "<p> Impuesto Total para CA: " + impuesto(estado(estado_1), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para TX: " + impuesto(estado(estado_2), neto(precio, cantidad)) + "</p>";
+                   "<p> Impuesto Total para TX: " + impuesto(estado(estado_2), neto(precio, cantidad)) +
+                   "<p> Impuesto Total para AL: " + impuesto(estado(estado_3), neto(precio, cantidad)) + "</p>";
 });
