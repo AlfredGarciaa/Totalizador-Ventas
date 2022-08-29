@@ -1,5 +1,6 @@
 import item from "./item.js";
 import precio from "./precio.js";
+import estado from "./estado.js";
 
 const items = document.querySelector("#cantidad-items");
 const form = document.querySelector("#cantidad-form");
@@ -34,5 +35,6 @@ form3.addEventListener("submit", (event) => {
 
   const EstadosList = estados.value;
 
-  div3.innerHTML = "<p>" + EstadosList + "</p>";
+  div3.innerHTML = "<p> Estado: " + EstadosList + 
+                   "<p> Impuesto: " + estado(EstadosList) + "</p>";
 });
