@@ -42,6 +42,7 @@ form3.addEventListener("submit", (event) => {
   const estado_2 = 'TX';
   const estado_3 = 'AL';
   const estado_4 = 'NV';
+  const estado_5 = 'UT';
 
   div3.innerHTML = "<p> Estado: " + EstadosList + 
                    "<p> Impuesto: " + estado(EstadosList) +
@@ -49,5 +50,6 @@ form3.addEventListener("submit", (event) => {
                    "<p> Impuesto Total para CA: " + impuesto(estado(estado_1), neto(precio, cantidad)) +
                    "<p> Impuesto Total para TX: " + impuesto(estado(estado_2), neto(precio, cantidad)) +
                    "<p> Impuesto Total para AL: " + impuesto(estado(estado_3), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para NV: " + impuesto(estado(estado_4), neto(precio, cantidad)) + "</p>";
+                   "<p> Impuesto Total para NV: " + impuesto(estado(estado_4), neto(precio, cantidad)) +
+                   "<p> Impuesto Total para NV: " + impuesto(estado(estado_5), neto(precio, cantidad)) + "</p>";
 });
