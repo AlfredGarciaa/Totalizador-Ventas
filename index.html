@@ -1,12 +1,23 @@
 <html>
   <body>
     <h1>Totalizador de Ventas</h1>
-    <form id="mostrar-form">
+    <form id="cantidad-form">
       <label for="cantidad-items">Cantidad de Items:</label>
       <input type="number" id="cantidad-items" />
-      <input type="submit" value="Mostrar" />
+      <br>
+        <input type="submit" value="Mostrar" />
+      </br>
     </form>
-    <div id="resultado-div"></div>
+    <div id="cantidad-div"></div>
+
+    <form id="precio-form">
+      <label for="precio-items">Precio de Items:</label>
+      <input type="number" id="precio-items" />
+      <br>
+        <input type="submit" value="Mostrar" />
+      </br>
+    </form>
+    <div id="precio-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
