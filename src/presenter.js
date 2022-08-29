@@ -1,7 +1,8 @@
-import item from "./item.js";
-import precio from "./precio.js";
-import estado from "./estado.js";
-import neto from "./neto.js";
+import item from "./items.js";
+import precio from "./precios.js";
+import estado from "./estados.js";
+import neto from "./netos.js";
+import impuesto from "./impuestos.js";
 
 const cantidades = document.querySelector("#cantidad-items");
 const form = document.querySelector("#cantidad-form");
@@ -37,8 +38,10 @@ form3.addEventListener("submit", (event) => {
   const EstadosList = estados.value;
   const precio = Number.parseInt(precios.value);
   const cantidad = Number.parseInt(cantidades.value);
+  const estado_1 = 'CA';
 
   div3.innerHTML = "<p> Estado: " + EstadosList + 
                    "<p> Impuesto: " + estado(EstadosList) +
-                   "<p> Precio Neto: " + neto(precio, cantidad) + "</p>";
+                   "<p> Precio Neto: " + neto(precio, cantidad) +
+                   "<p> Impuesto Total para CA: " + impuesto(estado(estado_1), neto(precio, cantidad)) + "</p>";
 });
