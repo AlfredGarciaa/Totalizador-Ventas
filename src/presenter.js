@@ -45,7 +45,7 @@ form3.addEventListener("submit", (event) => {
   const estado_3 = 'AL';
   const estado_4 = 'NV';
   const estado_5 = 'UT';
-
+  
   div3.innerHTML = "<p> Estado: " + EstadosList + 
                    "<p> Impuesto: " + estado(EstadosList) +
                    "<p> Precio Neto: " + neto(precio, cantidad) +
