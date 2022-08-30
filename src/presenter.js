@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
 
   const CantidadesNumber = Number.parseInt(cantidades.value);
 
-  div.innerHTML = "<p>" + item(CantidadesNumber) + "</p>";
+  div.innerHTML = "<p>" + item(CantidadesNumber) + " Unidades</p>";
 });
 
 form2.addEventListener("submit", (event) => {
@@ -31,7 +31,7 @@ form2.addEventListener("submit", (event) => {
 
   const PreciosNumber = Number.parseInt(precios.value);
 
-  div2.innerHTML = "<p>" + precio(PreciosNumber) + "</p>";
+  div2.innerHTML = "<p>" + precio(PreciosNumber) + " $us</p>";
 });
 
 form3.addEventListener("submit", (event) => {
@@ -45,19 +45,19 @@ form3.addEventListener("submit", (event) => {
   const estado_3 = 'AL';
   const estado_4 = 'NV';
   const estado_5 = 'UT';
-  
+
   div3.innerHTML = "<p> Estado: " + EstadosList + 
-                   "<p> Impuesto: " + estado(EstadosList) +
-                   "<p> Precio Neto: " + neto(precio, cantidad) +
+                   "<p> Impuesto: " + estado(EstadosList) + "%<p>" +
+                   "<p> Precio Neto: " + neto(precio, cantidad) + " $us<p>" +
                    "<p> Tasa de Descuento con 1000: " + descuento(neto(precio, cantidad)) + "%<p>" +
                    "<p> Tasa de Descuento con 3000: " + descuento(neto(precio, cantidad)) + "%<p>" +
                    "<p> Tasa de Descuento con 7000: " + descuento(neto(precio, cantidad)) + "%<p>" +
-                   "<p> Precio Total: " + precio_total(neto(precio, cantidad), impuesto(estado(EstadosList), neto(precio, cantidad)), descuento(neto(precio, cantidad))) +
+                   "<p> Precio Total: " + precio_total(neto(precio, cantidad), impuesto(estado(EstadosList), neto(precio, cantidad)), descuento(neto(precio, cantidad))) + " $us<p>" +
                    "<p><br>" +
-                   "<p> Impuesto Total para CA: " + impuesto(estado(estado_1), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para TX: " + impuesto(estado(estado_2), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para AL: " + impuesto(estado(estado_3), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para NV: " + impuesto(estado(estado_4), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para UT: " + impuesto(estado(estado_5), neto(precio, cantidad)) + 
+                   "<p> Impuesto Total para CA: " + impuesto(estado(estado_1), neto(precio, cantidad)) + " $us<p>" +
+                   "<p> Impuesto Total para TX: " + impuesto(estado(estado_2), neto(precio, cantidad)) + " $us<p>" +
+                   "<p> Impuesto Total para AL: " + impuesto(estado(estado_3), neto(precio, cantidad)) + " $us<p>" +
+                   "<p> Impuesto Total para NV: " + impuesto(estado(estado_4), neto(precio, cantidad)) + " $us<p>" +
+                   "<p> Impuesto Total para UT: " + impuesto(estado(estado_5), neto(precio, cantidad)) + " $us<p>" +
                    "</p>";
 });
