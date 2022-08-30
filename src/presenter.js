@@ -49,14 +49,15 @@ form3.addEventListener("submit", (event) => {
   div3.innerHTML = "<p> Estado: " + EstadosList + 
                    "<p> Impuesto: " + estado(EstadosList) +
                    "<p> Precio Neto: " + neto(precio, cantidad) +
-                   "<p> Tasa de Descuento con 1000: " + descuento(neto(precio, cantidad)) +
-                   "<p> Tasa de Descuento con 3000: " + descuento(neto(precio, cantidad)) +
-                   "<p> Tasa de Descuento con 7000: " + descuento(neto(precio, cantidad)) +
+                   "<p> Tasa de Descuento con 1000: " + descuento(neto(precio, cantidad)) + "%<p>" +
+                   "<p> Tasa de Descuento con 3000: " + descuento(neto(precio, cantidad)) + "%<p>" +
+                   "<p> Tasa de Descuento con 7000: " + descuento(neto(precio, cantidad)) + "%<p>" +
                    "<p> Precio Total: " + precio_total(neto(precio, cantidad), impuesto(estado(EstadosList), neto(precio, cantidad)), descuento(neto(precio, cantidad))) +
                    "<p><br>" +
                    "<p> Impuesto Total para CA: " + impuesto(estado(estado_1), neto(precio, cantidad)) +
                    "<p> Impuesto Total para TX: " + impuesto(estado(estado_2), neto(precio, cantidad)) +
                    "<p> Impuesto Total para AL: " + impuesto(estado(estado_3), neto(precio, cantidad)) +
                    "<p> Impuesto Total para NV: " + impuesto(estado(estado_4), neto(precio, cantidad)) +
-                   "<p> Impuesto Total para UT: " + impuesto(estado(estado_5), neto(precio, cantidad)) + "</p>";
+                   "<p> Impuesto Total para UT: " + impuesto(estado(estado_5), neto(precio, cantidad)) + 
+                   "</p>";
 });
