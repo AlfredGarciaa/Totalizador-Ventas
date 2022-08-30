@@ -1,24 +1,19 @@
 function estado(nombre) {
     let impuesto;
     
-    if(nombre == "UT")
-    {
+    if(nombre == "UT"){
       impuesto = 6.65;
     }
-    if(nombre == "NV")
-    {
+    if(nombre == "NV"){
       impuesto = 8.00;
     }
-    if(nombre == "TX")
-    {
+    if(nombre == "TX"){
       impuesto = 6.25;
     }
-    if(nombre == "AL")
-    {
+    if(nombre == "AL"){
       impuesto = 4.00;
     }
-    if(nombre == "CA")
-    {
+    if(nombre == "CA"){
       impuesto = 8.25;
     }
 
