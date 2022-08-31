@@ -1,6 +1,8 @@
 import impuesto from "./impuestos.js";
 import estado from "./estados.js";
 import neto from "./netos.js";
+import descuento from "./descuentos.js";
+import porcentaje from "./porcentajes.js";
 
 describe("==============    /// IMPUESTOS ///   ==============", () => {
   // if resultado X == X then mostrar mensaje de exito (verde)
@@ -28,5 +30,14 @@ describe("==============    /// IMPUESTOS ///   ==============", () => {
   it("deberia calcular el impuesto del estado CA", () => {
     const resultado = impuesto(estado("CA"), neto(35, 80));
     expect(resultado).toEqual(231); 
+  });
+});
+
+describe("\n==============    /// DESCUENTOS ///   ==============", () => {
+  // if resultado X == X then mostrar mensaje de exito (verde)
+  // else mostrar mensaje de falla (rojo)
+  it("deberia calcular el descuento mayor a 1000", () => {
+    const resultado = descuento(porcentaje(neto(50, 10)), neto(50, 10));
+    expect(resultado).toEqual(15); 
   });
 });
