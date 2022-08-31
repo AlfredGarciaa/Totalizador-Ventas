@@ -1,10 +1,9 @@
 function impuesto(impuesto_estado, impuesto_neto) {
-    let impuesto, resultado;
+    let impuesto;
     
     impuesto = (impuesto_estado * impuesto_neto)/100;
-    resultado = impuesto + impuesto_neto;
 
-    return resultado;
+    return impuesto;
   }
   
   export default impuesto;
