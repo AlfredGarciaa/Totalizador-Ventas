@@ -3,10 +3,12 @@ import estado from "./estados.js";
 import neto from "./netos.js";
 import descuento from "./descuentos.js";
 import porcentaje from "./porcentajes.js";
+import precio_total from "./precios_totales.js";
 
-describe("==============    /// IMPUESTOS ///   ==============", () => {
   // if resultado X == X then mostrar mensaje de exito (verde)
   // else mostrar mensaje de falla (rojo)
+
+describe("==============    /// IMPUESTOS ///   ==============", () => {
   it("deberia calcular el impuesto del estado UT", () => {
     const resultado = impuesto(estado("UT"), neto(12, 20));
     expect(resultado).toEqual(15.96); 
@@ -34,8 +36,6 @@ describe("==============    /// IMPUESTOS ///   ==============", () => {
 });
 
 describe("\n==============    /// DESCUENTOS ///   ==============", () => {
-  // if resultado X == X then mostrar mensaje de exito (verde)
-  // else mostrar mensaje de falla (rojo)
   it("deberia calcular el descuento mayor a 1000", () => {
     const resultado = descuento(porcentaje(neto(150, 10)), neto(150, 10));
     expect(resultado).toEqual(45); 
@@ -59,5 +59,12 @@ describe("\n==============    /// DESCUENTOS ///   ==============", () => {
   it("deberia calcular el descuento mayor a 30000", () => {
     const resultado = descuento(porcentaje(neto(40, 821)), neto(40, 821));
     expect(resultado).toEqual(4926); 
+  });
+});
+
+describe("\n==============    /// PRECIO TOTAL ///   ==============", () => {
+  it("deberia calcular el precio total=neto+impuesto-descuento del estado de NV", () => {
+    const resultado = precio_total(neto(50, 100), impuesto(estado("NV"), neto(50, 100)), descuento(porcentaje(neto(50, 100)), neto(50, 100)));
+    expect(resultado).toEqual(5150); 
   });
 });

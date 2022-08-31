@@ -1,9 +1,7 @@
 function precio_total(netos, impuestos, descuentos) {
-    let sumador, rebaja, respuesta;
+    let respuesta;
 
-    sumador = netos+impuestos;
-    rebaja = (sumador*descuentos)/100;
-    respuesta = netos+impuestos-rebaja;
+    respuesta = netos+impuestos-descuentos;
 
     return respuesta;
   }
