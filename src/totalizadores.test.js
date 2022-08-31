@@ -37,12 +37,12 @@ describe("\n==============    /// DESCUENTOS ///   ==============", () => {
   // if resultado X == X then mostrar mensaje de exito (verde)
   // else mostrar mensaje de falla (rojo)
   it("deberia calcular el descuento mayor a 1000", () => {
-    const resultado = descuento(porcentaje(neto(50, 10)), neto(50, 10));
-    expect(resultado).toEqual(15); 
+    const resultado = descuento(porcentaje(neto(150, 10)), neto(150, 10));
+    expect(resultado).toEqual(45); 
   });
 
   it("deberia calcular el descuento mayor a 3000", () => {
     const resultado = descuento(porcentaje(neto(120, 30)), neto(120, 30));
-    expect(resultado).toEqual(252); 
+    expect(resultado).toEqual(180); 
   });
 });
