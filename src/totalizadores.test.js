@@ -19,4 +19,9 @@ describe("==============    /// IMPUESTOS ///   ==============", () => {
     const resultado = impuesto(estado("TX"), neto(20, 22));
     expect(resultado).toEqual(27.50); 
   });
+
+  it("deberia calcular el impuesto del estado AL", () => {
+    const resultado = impuesto(estado("AL"), neto(3, 1));
+    expect(resultado).toEqual(0.12); 
+  });
 });
