@@ -40,4 +40,9 @@ describe("\n==============    /// DESCUENTOS ///   ==============", () => {
     const resultado = descuento(porcentaje(neto(50, 10)), neto(50, 10));
     expect(resultado).toEqual(15); 
   });
+
+  it("deberia calcular el descuento mayor a 3000", () => {
+    const resultado = descuento(porcentaje(neto(120, 30)), neto(120, 30));
+    expect(resultado).toEqual(252); 
+  });
 });
